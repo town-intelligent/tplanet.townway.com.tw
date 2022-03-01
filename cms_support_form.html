@@ -12,8 +12,9 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="static/css/style.css" >
-    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/progress_bar.css">
   </head>
 
   <body>
@@ -55,69 +56,100 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
-                註冊
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
           </ul>
-          <button class="btn btn-primary my-2 my-sm-0" type="submit">登入</button>
         </div>
       </div>
     </nav>
+    <!-- step progress bar -->
+    <div class="contanier">
+      <ul class="progressbar mt-5">
+        <li class=" step1 text-center">
+            <strong>計畫基本資料</strong>
+        </li>
+        <li class="step2 text-center">
+          <strong>SDGs 指標設定</strong>
+        </li>
+        <li class="step3 text-center active">
+          <strong>社會影響力展現</strong>
+        </li>
+        <li class="step4 text-center">
+          <strong>專案聯繫窗口</strong>
+        </li>
+      </ul>
+    </div>
     <!-- content -->
     <section>
-      <div class="container-fluid px-0 mt-4">
-        <div class="bg-cover img-fluid w-100" style="background-image: url(static/imgs/project_img.jpg); height: 450px">
-        </div>
-      </div>
       <div class="container">
-        <div class="row mt-3 mt-md-5 justify-content-center">
-          <div class="col-md-12">
-            <p>
-              T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案T-planet 文案
-            </p>
-          </div>
-          <div class="col-md-12">
-            <div class="text-center">
-              <img class="img-fluid" src="static/imgs/tplanet_map.png" alt="">
+        <form action="">
+          <div class="row mt-5 pt-3 align-items-center justify-content-center">
+            <div class="col-12">
+              <p class="bg-warning p-2">支持型表單形式</p>
             </div>
           </div>
-        </div>
-        <div class="row mt-3 mt-md-5 align-items-center">
-          <div class="col-md-6">
-            <div class="text-center">
-              <img class="img-fluid" src="static/imgs/csr.png" alt="">
+          <div class="form-group row justify-content-center">
+            <div class="col-10">
+              <div class="row align-items-center">
+                <img class="col-1" src="static/imgs/SDGs_04.jpg" alt="">
+                <label class="col-1 col-form-label pr-0">支持，</label>
+                <div class="col-10 pl-0">
+                  <input type="text" class="form-control" placeholder="SDG 4 良質教育，請留下您的支持評論。">
+                </div>
+              </div>
+              <div class="row align-items-center mt-4">
+                <img class="col-1" src="static/imgs/SDGs_08.jpg" alt="">
+                <label class="col-1 col-form-label pr-0">支持，</label>
+                <div class="col-10 pl-0">
+                  <input type="text" class="form-control" placeholder="SDG 8 合適的工作與經濟成長，請留下您的支持評論。">
+                </div>
+              </div>
+              <div class="row align-items-center mt-4">
+                <img class="col-1" src="static/imgs/SDGs_11.jpg" alt="">
+                <label class="col-1 col-form-label pr-0">支持，</label>
+                <div class="col-10 pl-0">
+                  <input type="text" class="form-control" placeholder="SDG 11 永續城鄉，請留下您的支持評論。">
+                </div>
+              </div>
+              <div class="row align-items-center mt-4">
+                <img class="col-1" src="static/imgs/SDGs_15.jpg" alt="">
+                <label class="col-1 col-form-label pr-0">支持，</label>
+                <div class="col-10 pl-0">
+                  <input type="text" class="form-control" placeholder="SDG 15 陸地生態保育，請留下您的支持評論。">
+                </div>
+              </div>
+              <div class="row align-items-center mt-4">
+                <div class="col-1">
+                  <button type="button" class="btn btn-outline-dark rounded-0 w-100" style="height: 49px">+</button>
+                </div>
+                <label class="col-1 col-form-label pr-0">支持，</label>
+                <div class="col-10 pl-0">
+                  <input type="text" class="form-control" placeholder="請留下您的支持評論。">
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-3 mt-md-0">
-            <p>
-              CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案 CSR 文案
-            </p>
-          </div>
-        </div>
-        <div class="row mt-3 mt-md-5 flex-md-row-reverse align-items-center">
-          <div class="col-md-6">
-            <div class="text-center">
-              <img class="img-fluid" src="static/imgs/SDGs_all.png" alt="">
+          <div class="row mt-5 mb-5 pb-3">
+            <div class="col-12 mt-5">
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-primary" style="width: 20%">上一步</button>
+                <button class="btn btn-primary" style="width: 20%">檢視草稿</button>
+                <button class="btn btn-primary" style="width: 20%">儲存草稿</button>
+                <button class="btn btn-primary" style="width: 20%">下一步</button>
+              </div>
             </div>
           </div>
-          <div class="col-md-6 mt-3 mt-md-0 h-100">
-            <p>
-              SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案 SDG 文案
-            </p>
-          </div>
-        </div>
-        <div class="row mt-3 mt-md-5 mb-5 align-items-center">
-          <div class="col-md-6">
-            <div class="text-center">
-              <img class="img-fluid" src="static/imgs/ditital_twins.png" alt="">
-            </div>
-          </div>
-          <div class="col-md-6 mt-3 mt-md-0">
-            <p>
-              數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案數位孿生文案
-            </p>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
     <!-- footer -->
