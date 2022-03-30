@@ -159,21 +159,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="border d-flex align-items-center justify-content-center h-100">
               <img src="static/imgs/image_icon.svg" width="100" height="100" alt="">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <form>
               <div class="form-row">
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-3 mt-md-0">
                   <label for="inputEvent">活動名稱</label>
                   <input type="text" class="form-control" id="inputEvent" placeholder="">
                 </div>
                 <div class="form-group col-12">
                   <label for="inputEvent">SDGs</label>
-                  <div class="d-flex">
+                  <div class="d-flex flex-wrap">
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_04.jpg" alt="" style="width:60px">
                     </a>
@@ -186,7 +186,7 @@
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_15.jpg" alt="" style="width:60px">
                     </a>
-                    <button type="button" class="btn btn-outline-dark rounded-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
+                    <button type="button" class="btn btn-outline-dark rounded-0 mt-3 mt-md-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
                   </div>
                 </div>
                 <div class="form-group col-12">
@@ -212,7 +212,7 @@
                 </div>
                 <div class="form-group col-12 mb-0">
                   <label for="textareaIdea">關係人口評論</label>
-                  <textarea class="form-control w-100" id="textareaIdea" placeholder=""></textarea>
+                  <textarea class="form-control w-100" id="textareaIdea" placeholder="" style="resize: none"></textarea>
                 </div>
               </div>
             </form>
@@ -220,21 +220,21 @@
         </div>
         <hr class="my-4">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="border d-flex align-items-center justify-content-center h-100">
               <img src="static/imgs/image_icon.svg" width="100" height="100" alt="">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <form>
               <div class="form-row">
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-3 mt-md-0">
                   <label for="inputEvent">活動名稱</label>
                   <input type="text" class="form-control" id="inputEvent" placeholder="">
                 </div>
                 <div class="form-group col-12">
                   <label for="inputEvent">SDGs</label>
-                  <div class="d-flex">
+                  <div class="d-flex flex-wrap">
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_04.jpg" alt="" style="width:60px">
                     </a>
@@ -247,7 +247,7 @@
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_15.jpg" alt="" style="width:60px">
                     </a>
-                    <button type="button" class="btn btn-outline-dark rounded-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
+                    <button type="button" class="btn btn-outline-dark rounded-0 mt-3 mt-md-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
                   </div>
                 </div>
                 <div class="form-group col-12">
@@ -273,7 +273,7 @@
                 </div>
                 <div class="form-group col-12 mb-0">
                   <label for="textareaIdea">關係人口評論</label>
-                  <textarea class="form-control w-100" id="textareaIdea" placeholder=""></textarea>
+                  <textarea class="form-control w-100" id="textareaIdea" placeholder="" style="resize: none"></textarea>
                 </div>
               </div>
             </form>
@@ -285,14 +285,20 @@
             <button class="btn btn-block btn-outline-secondary">+</button>
           </div>
         </div>
-        <div class="row mt-4 mb-5 pb-3">
-          <div class="col-12">
+        <div class="row mt-5 mb-5 pb-3">
+          <div class="col-12 mt-5 d-none d-md-block">
             <div class="d-flex justify-content-between">
               <button class="btn btn-primary" style="width: 20%">上一步</button>
               <button class="btn btn-primary" style="width: 20%">檢視草稿</button>
               <button class="btn btn-primary" style="width: 20%">儲存草稿</button>
-              <button class="btn btn-primary" style="width: 20%">下一步</button>
+              <button class="btn btn-primary" style="width: 20%">完成</button>
             </div>
+          </div>
+          <div class="col-12 mt-3 d-md-none">
+            <button class="btn btn-primary btn-block">上一步</button>
+            <button class="btn btn-primary btn-block mt-3">檢視草稿</button>
+            <button class="btn btn-primary btn-block mt-3">儲存草稿</button>
+            <button class="btn btn-primary btn-block mt-3">完成</button>
           </div>
         </div>
       </div>
