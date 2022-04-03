@@ -7,11 +7,6 @@
 	background-position: center center;
 }
 
-.bg-cover{
-	background-size: cover;
-	background-position: center center;
-}
-
 .bg-contain{
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -32,4 +27,14 @@
 
 .border-light-gray {
   border:1px solid rgba(0,0,0,.125);
+}
+
+.dropdown-menu-center {
+  position: absolute;
+  top: 75px;
+  right: auto;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
 }

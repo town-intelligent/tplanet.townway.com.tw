@@ -21,9 +21,44 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
+        <a class="navbar-brand" href="#">
           <img src="static/imgs/tplanet_logo_s.jpg" width="45" class="d-inline-block align-top" alt="">
         </a>
+        <a class="nav-link d-md-none" href="#">
+          <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <a class="nav-link d-md-none" href="#">
+          <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <a class="nav-link d-md-none" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <div class="dropdown-menu dropdown-menu-center">
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">基本資料</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">我的提案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">永續專案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">訂閱方案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">訊息管理</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">登出</span>
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,10 +69,11 @@
               <a class="nav-link" href="/index.html">關於 T-planet</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list.html">永續企業</a>
+              <a class="nav-link" href="#">永續企業</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list_local.html">地方團隊</a>            </li>
+              <a class="nav-link" href="#">地方團隊</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/kpi.html">永續專案</a>
             </li>
@@ -52,20 +88,46 @@
             </li>
           </ul>
           <ul class="navbar-nav mr-2">
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li class="nav-item dropdown d-none d-md-block">
+              <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                 <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">基本資料</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">我的提案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">永續專案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">訂閱方案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">訊息管理</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">登出</span>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -97,21 +159,21 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="border d-flex align-items-center justify-content-center h-100">
               <img src="static/imgs/image_icon.svg" width="100" height="100" alt="">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <form>
               <div class="form-row">
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-3 mt-md-0">
                   <label for="inputEvent">活動名稱</label>
                   <input type="text" class="form-control" id="inputEvent" placeholder="">
                 </div>
                 <div class="form-group col-12">
                   <label for="inputEvent">SDGs</label>
-                  <div class="d-flex">
+                  <div class="d-flex flex-wrap">
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_04.jpg" alt="" style="width:60px">
                     </a>
@@ -124,7 +186,7 @@
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_15.jpg" alt="" style="width:60px">
                     </a>
-                    <button type="button" class="btn btn-outline-dark rounded-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
+                    <button type="button" class="btn btn-outline-dark rounded-0 mt-3 mt-md-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
                   </div>
                 </div>
                 <div class="form-group col-12">
@@ -150,7 +212,7 @@
                 </div>
                 <div class="form-group col-12 mb-0">
                   <label for="textareaIdea">關係人口評論</label>
-                  <textarea class="form-control w-100" id="textareaIdea" placeholder=""></textarea>
+                  <textarea class="form-control w-100" id="textareaIdea" placeholder="" style="resize: none"></textarea>
                 </div>
               </div>
             </form>
@@ -158,21 +220,21 @@
         </div>
         <hr class="my-4">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6">
             <div class="border d-flex align-items-center justify-content-center h-100">
               <img src="static/imgs/image_icon.svg" width="100" height="100" alt="">
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6">
             <form>
               <div class="form-row">
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-3 mt-md-0">
                   <label for="inputEvent">活動名稱</label>
                   <input type="text" class="form-control" id="inputEvent" placeholder="">
                 </div>
                 <div class="form-group col-12">
                   <label for="inputEvent">SDGs</label>
-                  <div class="d-flex">
+                  <div class="d-flex flex-wrap">
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_04.jpg" alt="" style="width:60px">
                     </a>
@@ -185,7 +247,7 @@
                     <a class="d-block" href="#">
                       <img class="mr-3" src="static/imgs/SDGs_15.jpg" alt="" style="width:60px">
                     </a>
-                    <button type="button" class="btn btn-outline-dark rounded-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
+                    <button type="button" class="btn btn-outline-dark rounded-0 mt-3 mt-md-0" style="height:60px; width:60px" data-toggle="modal" data-target="#staticBackdrop">+</button>
                   </div>
                 </div>
                 <div class="form-group col-12">
@@ -211,7 +273,7 @@
                 </div>
                 <div class="form-group col-12 mb-0">
                   <label for="textareaIdea">關係人口評論</label>
-                  <textarea class="form-control w-100" id="textareaIdea" placeholder=""></textarea>
+                  <textarea class="form-control w-100" id="textareaIdea" placeholder="" style="resize: none"></textarea>
                 </div>
               </div>
             </form>
@@ -223,14 +285,20 @@
             <button class="btn btn-block btn-outline-secondary">+</button>
           </div>
         </div>
-        <div class="row mt-4 mb-5 pb-3">
-          <div class="col-12">
+        <div class="row mt-5 mb-5 pb-3">
+          <div class="col-12 mt-5 d-none d-md-block">
             <div class="d-flex justify-content-between">
               <button class="btn btn-primary" style="width: 20%">上一步</button>
               <button class="btn btn-primary" style="width: 20%">檢視草稿</button>
               <button class="btn btn-primary" style="width: 20%">儲存草稿</button>
-              <button class="btn btn-primary" style="width: 20%">下一步</button>
+              <button class="btn btn-primary" style="width: 20%">完成</button>
             </div>
+          </div>
+          <div class="col-12 mt-3 d-md-none">
+            <button class="btn btn-primary btn-block">上一步</button>
+            <button class="btn btn-primary btn-block mt-3">檢視草稿</button>
+            <button class="btn btn-primary btn-block mt-3">儲存草稿</button>
+            <button class="btn btn-primary btn-block mt-3">完成</button>
           </div>
         </div>
       </div>

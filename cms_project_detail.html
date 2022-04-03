@@ -21,9 +21,44 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
+        <a class="navbar-brand" href="#">
           <img src="static/imgs/tplanet_logo_s.jpg" width="45" class="d-inline-block align-top" alt="">
         </a>
+        <a class="nav-link d-md-none" href="#">
+          <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <a class="nav-link d-md-none" href="#">
+          <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <a class="nav-link d-md-none" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <div class="dropdown-menu dropdown-menu-center">
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">基本資料</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">我的提案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">永續專案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">訂閱方案</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">訊息管理</span>
+          </a>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+            <span class="pl-2">登出</span>
+          </a>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,10 +69,11 @@
               <a class="nav-link" href="/index.html">關於 T-planet</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list.html">永續企業</a>
+              <a class="nav-link" href="#">永續企業</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list_local.html">地方團隊</a>            </li>
+              <a class="nav-link" href="#">地方團隊</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="/kpi.html">永續專案</a>
             </li>
@@ -52,20 +88,46 @@
             </li>
           </ul>
           <ul class="navbar-nav mr-2">
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li class="nav-item dropdown d-none d-md-block">
+              <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
                 <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">基本資料</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">我的提案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">永續專案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">訂閱方案</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">訊息管理</span>
+                </a>
+                <a class="dropdown-item d-flex align-items-center" href="#">
+                  <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
+                  <span class="pl-2">登出</span>
+                </a>
+              </div>
             </li>
           </ul>
         </div>
@@ -93,47 +155,52 @@
           <div class="col-12">
             <p class="h4 text-primary">竹山創生輔導合作計畫</p>
           </div>
-          <div class="col-6 mt-4">
+          <div class="col-md-6 mt-4">
             <div class="d-flex flex-column h-100 justify-content-start">
               <div class="row">
-                <div class="col-1 pr-0">
+                <div class="col-2 col-md-1 pr-0">
                   <a href="#">
                     <img class="w-100" src="static/imgs/SDGs_04.jpg" alt="">
                   </a>
                 </div>
-                <div class="col-1 pr-0">
+                <div class="col-2 col-md-1 pr-0">
                   <a href="#">
                     <img class="w-100" src="static/imgs/SDGs_08.jpg" alt="">
                   </a>
                 </div>
-                <div class="col-1 pr-0">
+                <div class="col-2 col-md-1 pr-0">
                   <a href="#">
                     <img class="w-100" src="static/imgs/SDGs_11.jpg" alt="">
                   </a>
                 </div>
-                <div class="col-1 pr-0">
+                <div class="col-2 col-md-1 pr-0">
                   <a href="#">
                     <img class="w-100" src="static/imgs/SDGs_15.jpg" alt="">
                   </a>
                 </div>
-                <div class="col-1 pr-0">
+                <div class="col-2 col-md-1 pr-0">
                   <a href="#">
                     <img class="w-100" src="static/imgs/SDGs_17.jpg" alt="">
                   </a>
                 </div>
               </div>
-              <p class="mt-3 mb-3">計畫期間:<span class="pl-2">2021.08.01 ~ 2022.07.31</span></p>
+              <div class="d-none d-md-block">
+                <p class="mt-3 mb-3">計畫期間:<span class="pl-2">2021.08.01 ~ 2022.07.31</span></p>
               <p class="mb-3">計畫編號:</p>
               <p><img class="mr-2" src="static/imgs/place_marker.svg" alt="" style="width:20px">T-Planet @ Zhushan</p>
+              </div>
             </div>
           </div>
-          <div class="col-6 mt-4">
+          <div class="col-md-6 mt-4">
             <div class="d-flex flex-column">
-              <p class="mb-3">永續企業:<span class="pl-2">永鑫能源</span></p>
+              <p class="mt-3 mt-md-0 mb-3">永續企業:<span class="pl-2">永鑫能源</span></p>
               <p class="mb-3">專案負責人:<span class="pl-2">蔡筑茵</span></p>
               <p class="mb-3">地方團隊:<span class="pl-2">元泰竹藝社、台灣長虹、東埔蚋溪環境保護協會</span></p>
               
               <p class="mb-3">電子郵件:<span class="pl-2">philaeld@gmail.com </span></p>
+              <p class="mb-3">計畫期間:<span class="pl-2">2021.08.01 ~ 2022.07.31</span></p>
+              <p class="mb-3">計畫編號:</p>
+              <p><img class="mr-2" src="static/imgs/place_marker.svg" alt="" style="width:20px">T-Planet @ Zhushan</p>
             </div>
           </div>
         </div>
@@ -150,24 +217,24 @@
         <div class="form-group row justify-content-center mt-3">
           <div class="col-12">
             <div class="row align-items-center">
-              <img class="col-1" src="static/imgs/SDGs_04.jpg" alt="">
-              <p class="col-11 col-form-label pr-0">支持，SDG 4 良質教育，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
+              <img class="col-3 col-md-1" src="static/imgs/SDGs_04.jpg" alt="">
+              <p class="col-9 col-md-11 col-form-label pr-md-0">支持，SDG 4 良質教育，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
             </div>
             <div class="row align-items-center mt-4">
-              <img class="col-1" src="static/imgs/SDGs_08.jpg" alt="">
-              <p class="col-11 col-form-label pr-0">支持，SDG 8 合適的工作與經濟成長，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
+              <img class="col-3 col-md-1" src="static/imgs/SDGs_08.jpg" alt="">
+              <p class="col-9 col-md-11 col-form-label pr-md-0">支持，SDG 8 合適的工作與經濟成長，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
             </div>
             <div class="row align-items-center mt-4">
-              <img class="col-1" src="static/imgs/SDGs_11.jpg" alt="">
-              <p class="col-11 col-form-label pr-0">支持，SDG 11 永續城鄉，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
+              <img class="col-3 col-md-1" src="static/imgs/SDGs_11.jpg" alt="">
+              <p class="col-9 col-md-11 col-form-label pr-md-0">支持，SDG 11 永續城鄉，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
             </div>
             <div class="row align-items-center mt-4">
-              <img class="col-1" src="static/imgs/SDGs_15.jpg" alt="">
-              <p class="col-11 col-form-label pr-0">支持，SDG 15 陸地生態保育，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
+              <img class="col-3 col-md-1" src="static/imgs/SDGs_15.jpg" alt="">
+              <p class="col-9 col-md-11 col-form-label pr-md-0">支持，SDG 15 陸地生態保育，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
             </div>
             <div class="row align-items-center mt-4">
-              <img class="col-1" src="static/imgs/SDGs_17.jpg" alt="">
-              <p class="col-11 col-form-label pr-0">支持，SDG 17 永續發展與全球夥伴關係，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
+              <img class="col-3 col-md-1" src="static/imgs/SDGs_17.jpg" alt="">
+              <p class="col-9 col-md-11 col-form-label pr-md-0">支持，SDG 17 永續發展與全球夥伴關係，你的評論內容你的評論內容你的評論內容你的評論內容你的評論內容</p>
             </div>
           </div>
         </div>
@@ -175,40 +242,46 @@
           <div class="col-12">
             <p class="h5">成果展現:</p>
           </div>
-          <div class="col-4">
+          <div class="col-6 col-md-4">
             <img class="img-fluid" src="static/imgs/product.jpg" alt="">
           </div>
-          <div class="col-4 text-center">
+          <div class="col-4 text-center d-none d-md-block">
             <img src="static/imgs/qr_code.png" style="height: 188px;" alt="">
           </div>
-          <div class="col-4">
+          <div class="col-6 text-center d-md-none">
+            <img src="static/imgs/qr_code.png" style="height: 102px;" alt="">
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0">
             <p>活動設計名稱: <span>減塑產品設計</span></p>
             <p>日期: <span>2022.02.25</span></p>
             <p class="small">設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念</p>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-4">
+        <div class="row mt-4 mt-md-5">
+          <div class="col-6 col-md-4">
             <img class="img-fluid" src="static/imgs/product.jpg" alt="">
           </div>
-          <div class="col-4 text-center">
+          <div class="col-4 text-center d-none d-md-block">
             <img src="static/imgs/qr_code.png" style="height: 188px;" alt="">
           </div>
-          <div class="col-4">
+          <div class="col-6 text-center d-md-none">
+            <img src="static/imgs/qr_code.png" style="height: 102px;" alt="">
+          </div>
+          <div class="col-md-4 mt-4 mt-md-0">
             <p>活動設計名稱: <span>減塑產品設計</span></p>
             <p>日期: <span>2022.02.25</span></p>
             <p class="small">設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念設計理念</p>
           </div>
         </div>
         
-        <div class="row my-5 align-items-center">
+        <div class="row my-5 align-items-center  justify-content-center">
           <div class="col-12">
             <p class="h5">參與方式:</p>
           </div>
-          <div class="col-10">
+          <div class="col-md-10">
             <img class="img-fluid" src="static/imgs/how_to_participate.png" alt="">
           </div>
-          <div class="col-2">
+          <div class="col-5 col-md-2 mt-4 mt-md-0">
             <img class="img-fluid" src="static/imgs/eid_qr_code.png" alt="">
           </div>
         </div>

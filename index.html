@@ -13,16 +13,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="static/css/style.css" >
-    <link rel="stylesheet" href="static/css/reset.css">
   </head>
 
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
+        <a class="navbar-brand mr-0" href="#">
           <img src="static/imgs/tplanet_logo_s.jpg" width="45" class="d-inline-block align-top" alt="">
         </a>
+        <a class="nav-link px-0 d-md-none" href="#">
+          <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        </a>
+        <a class="nav-link text-dark px-0 d-md-none" href="#">
+          註冊
+        </a>
+        <a class="btn btn-primary btn-sm d-md-none" href="#">登入</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,10 +39,10 @@
               <a class="nav-link" href="/index.html">關於 T-planet</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list.html">永續企業</a>
+              <a class="nav-link" href="#">永續企業</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/project_list_local.html">地方團隊</a>
+              <a class="nav-link" href="#">地方團隊</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/kpi.html">永續專案</a>
@@ -51,15 +57,19 @@
               <a class="nav-link" href="#">聯繫我們</a>
             </li>
           </ul>
-          <ul class="navbar-nav mr-2">
-            <li class="nav-item">
+          <ul class="navbar-nav mr-2 d-flex align-items-center">
+            <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="#">
                 <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
-                註冊
+              </a>
+            </li>
+            <li class="nav-item d-none d-md-block">
+              <a class="nav-link text-dark" href="#">
+                  註冊
               </a>
             </li>
           </ul>
-          <button class="btn btn-primary my-2 my-sm-0" onclick="location.href='/tplanet_signin.html';">登入</button>
+          <a class="btn btn-primary my-2 my-sm-0 d-none d-md-block" href="#">登入</a>
         </div>
       </div>
     </nav>
