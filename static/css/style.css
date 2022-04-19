@@ -7,6 +7,11 @@
 	background-position: center center;
 }
 
+.bg-cover{
+	background-size: cover;
+	background-position: center center;
+}
+
 .bg-contain{
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -37,4 +42,8 @@
   -webkit-transform: translate(-50%, 0);
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+}
+
+.text-primary-dark{
+  color: #3E6896;
 }
