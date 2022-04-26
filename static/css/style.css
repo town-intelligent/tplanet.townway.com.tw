@@ -38,3 +38,11 @@
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
+
+.text-primary-dark{
+  color: #3E6896;
+}
+
+.text-primary-darker{
+  color:#5285DF;
+}
