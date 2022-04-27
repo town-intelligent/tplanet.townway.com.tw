@@ -38,3 +38,11 @@
   -o-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
 }
+
+.card-button:hover{
+  box-shadow: 2px 2px 8px rgba(0, 0, 0,0.3);
+}
+
+.card-button:active{
+  background-color: #f8f9fa;
+}
