@@ -47,3 +47,26 @@
 .text-primary-dark{
   color: #3E6896;
 }
+
+.card-button:hover{
+  box-shadow: 2px 2px 8px rgba(0, 0, 0,0.3);
+}
+
+.card-button:active{
+  background-color: #f8f9fa;
+}
+
+.table-width-s{
+  min-width: 80px;
+}
+
+.table-width-m{
+  min-width: 160px;
+}
+
+.table-width-l{
+  min-width: 240px;
+}
+
+.table-width-xl{
+  min-width: 320px;
