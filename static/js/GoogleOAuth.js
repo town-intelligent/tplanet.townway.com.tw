@@ -23,12 +23,12 @@ function eIDLogin(id_token, res) {
       console.log(thrownError);
     }
   });
-   window.location.replace("/eid.html");
+   window.location.replace("/index.html");
 }
 
 //jQuery處理button click event 當畫面DOM都載入時....
 $(function () {
-    $("#btnSignIn").on("click", function () {
+    $("#btnGoogleSignIn").on("click", function () {
 	// $("#content").html("");//清空顯示結果
 	GoogleLogin();//Google 登入
     });
@@ -66,7 +66,6 @@ function GoogleLogin() {
 	    //通常你會想要知道的用戶個資↓
 	    'personFields': 'names,emailAddresses',
 	}).then(function (res) {
-
 		//success
 		let str = JSON.stringify(res.result);//將物件列化成string，方便顯示結果在畫面上
 		//顯示授權你網站存取的用戶個資
@@ -79,12 +78,11 @@ function GoogleLogin() {
 
 		//最終，取得用戶個資後看要填在畫面表單上或是透過Ajax儲存到資料庫(記得是傳id_token給你的Web Server而不是明碼的user_id喔)，本範例就不贅述，請自行努力XD
 		eIDLogin(id_token, res);
-	});
+        });
 
-    },
-	function (error) {
-	    console.log("Google登入失敗");
-	    console.log(error);
-	});
+    }, function (error) {
+      console.log("Google登入失敗");
+      console.log(error);
+    });
 
 }//end function GoogleLogin

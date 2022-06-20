@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+<!--
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+--!>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="static/css/style.css" >
     <link rel="stylesheet" href="static/css/progress_bar.css">
+
+    <script src="static/js/config.js"></script>
+    <script src="static/js/localStorage.js"></script>
 
    <script type="text/javascript">
         let CLIENT_ID = "1080674192413-b1vnqslm4gif3p9ntaj4ifl4i572p0bn.apps.googleusercontent.com";
@@ -26,7 +43,93 @@
             onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
 
-    <script src="../static/js/GoogleOAuth.js"></script>
+    <script src="static/js/GoogleOAuth.js"></script>
+    <script src="static/js/FacebookOAuth.js"></script>
+
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '597308661353623',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+    FB.AppEvents.logPageView();   
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ 
+  $(function() {
+    $("#btnFbSignIn").click(function() {
+      FB.getLoginStatus(function(response) {
+        if (response.authResponse) {
+          FB.api('/me',{fields: 'id,name,email'}, function (response) {
+              var access_token = FB.getAuthResponse()['accessToken'];
+              // username, e-mail, token
+              eIDFacebookLogin(access_token, response);
+          });
+        //沒授權過應用程式
+        } else {
+          //呼叫FB.login()請求使用者授權
+          FB.login(function (response) {
+            if (response.authResponse) {
+              FB.api('/me',{fields: 'id,name,email'}, function (response) {
+                //這邊就可以判斷取得資料跟網站使用者資料是否一致
+              var access_token = FB.getAuthResponse()['accessToken'];
+
+              // username, e-mail, token
+              eIDFacebookLogin(access_token, response);
+              });
+            }
+          //FB.login()預設只會回傳基本的授權資料
+          //如果想取得額外的授權資料需要另外設定在scope參數裡面
+          //可以設定的授權資料可以參考官方文件          
+          }, { scope: 'email' });
+        }
+      });
+    });
+  });
+  </script>
+
+    <script>
+    $(function () {
+      $('form').on('submit', function(e){
+        var dataJSON = {};
+        dataJSON.email =  $("#email").val();
+        dataJSON.password =  $("#password").val();
+        e.preventDefault();
+        $.ajax({
+          url: "https://eid-backend.townway.com.tw/accounts/signin",
+          type: "POST",
+          crossDomain: true,
+          data:  dataJSON,
+          success: function(returnData) {
+            const obj = JSON.parse(returnData);
+            setLocalStorage("jwt", obj.token);
+            setLocalStorage("username", obj.username);
+            setLocalStorage("email", $("#email").val());
+            console.log("Get JWT from cookie" +  getLocalStorage("jwt"));
+            window.location.replace("/index.html");
+          },
+          error: function(xhr, ajaxOptions, thrownError){
+
+            var elemWrongPw = document.getElementById("wrong-pw");
+            if (elemWrongPw != null) {
+              elemWrongPw.style.visibility = "visible";
+             }
+
+            console.log(thrownError);
+          }
+        });
+      });
+    });
+    </script>
+
   </head>
 
   <body>
@@ -121,13 +224,13 @@
           </div>
           <div class="row mt-3">
             <div class="col-md-6 pl-0 pr-0 pr-md-1">
-              <a href="" class="btn btn-block btn-outline-secondary">
+              <a href="" class="btn btn-block btn-outline-secondary" id="btnFbSignIn">
                 <img class="mr-2" src="static/imgs/fb-logo-s.png" alt="">
                 <small class="text-dark">透過 Facebook 登入</small>
               </a>
             </div>
             <div class="col-md-6 pr-0 pl-0 pl-md-1 mt-3 mt-md-0">
-              <a href="" class="btn btn-block btn-outline-secondary">
+              <a href="" class="btn btn-block btn-outline-secondary" id="btnGoogleSignIn">
                 <img class="mr-2" src="static/imgs/google-logo-s.png" alt="">
                 <small class="text-dark">透過 Google 登入</small>
               </a>
