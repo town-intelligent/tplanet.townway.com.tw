@@ -81,8 +81,9 @@ function GoogleLogin() {
         });
 
     }, function (error) {
-      console.log("Google登入失敗");
+      console.log("Google 登入失敗");
       console.log(error);
+      alert(error);
     });
 
 }//end function GoogleLogin
