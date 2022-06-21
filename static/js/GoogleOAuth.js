@@ -52,6 +52,7 @@ function GoogleClientInit() {
 }//end GoogleClientInit function
 
 function GoogleLogin() {
+
     let auth2 = gapi.auth2.getAuthInstance();//取得GoogleAuth物件
 
     auth2.signIn().then(function (GoogleUser) {
@@ -81,7 +82,7 @@ function GoogleLogin() {
         });
 
     }, function (error) {
-      console.log("Google 登入失敗");
+      console.log("Google登入失敗");
       console.log(error);
       alert(error);
     });
