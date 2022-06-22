@@ -21,45 +21,16 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">
+        <a class="navbar-brand mr-0" href="/index.html">
           <img src="static/imgs/tplanet_logo_s.jpg" width="45" class="d-inline-block align-top" alt="">
         </a>
-        <a class="nav-link d-md-none" href="/ab_plan_info.html">
+        <a class="nav-link px-0 d-md-none" href="/tplanet_signup.html">
           <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
         </a>
-        <a class="nav-link d-md-none" href="#">
-          <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+        <a class="nav-link text-dark px-0 d-md-none" href="/tplanet_signup.html">
+          註冊
         </a>
-        <a class="nav-link d-md-none" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-          <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
-        </a>
-        <div class="dropdown-menu dropdown-menu-center">
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">基本資料</span>
-          </a>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">我的提案</span>
-          </a>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">永續專案</span>
-          </a>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">訂閱方案</span>
-          </a>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">訊息管理</span>
-          </a>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-            <span class="pl-2">登出</span>
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="btn btn-primary btn-sm d-md-none" href="/tplanet_signin.html">登入</a>        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
@@ -87,49 +58,19 @@
               <a class="nav-link" href="/contact_us.html">聯繫我們</a>
             </li>
           </ul>
-          <ul class="navbar-nav mr-2">
+          <ul class="navbar-nav mr-2 d-flex align-items-center">
             <li class="nav-item d-none d-md-block">
               <a class="nav-link" href="/ab_plan_info.html">
                 <img src="static/imgs/registration_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
               </a>
             </li>
             <li class="nav-item d-none d-md-block">
-              <a class="nav-link" href="#">
-                <img src="static/imgs/notifications_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
+              <a class="nav-link text-dark" href="/tplanet_signup.html">
+                  註冊
               </a>
-            </li>
-            <li class="nav-item dropdown d-none d-md-block">
-              <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                <img src="static/imgs/manage_accounts_icon.svg" width="35" height="35" class="d-inline-block align-middle" alt="">
-              </a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/personal_info.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">基本資料</span>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/registration_icon.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">我的提案</span>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/cooperate.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">永續專案</span>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/subscribe.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">訂閱方案</span>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/message.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">訊息管理</span>
-                </a>
-                <a class="dropdown-item d-flex align-items-center" href="#">
-                  <img src="static/imgs/logout.svg" alt="" width="30" height="30" class="d-inline-block align-middle">
-                  <span class="pl-2">登出</span>
-                </a>
-              </div>
             </li>
           </ul>
+          <a class="btn btn-primary my-2 my-sm-0 d-none d-md-block" href="/tplanet_signin.html">登入</a>
         </div>
       </div>
     </nav>
